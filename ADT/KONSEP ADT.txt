@@ -1,0 +1,20 @@
+Konsep ADT Gabungan :
+1. Kasus ADT Point dalam List
+{tipe bentukan}
+type Point:<abs, ord : integer>
+type address:pointer to ElmList
+type ElmList :<info:Point, next:address>
+type List:<first:address>
+
+{operasi-operasi}
+procedure CreateList(out L:List)
+first(L) = nil
+
+function Alokasi(P:Point)
+{kamus}
+Px:address
+{algoritma}
+Px = new(ElmList)
+info(Px) = P
+next(Px) = nil
+return(Px)
